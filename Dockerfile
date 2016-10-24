@@ -9,8 +9,6 @@ RUN apt-get update && apt-get install -y \
         python                           \
         python-dev
 
-USER builder
-
 RUN git clone https://github.com/potentialventures/cocotb.git
 
-RUN export COCOTB=/cocotb
+ENV COCOTB /cocotb
